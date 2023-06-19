@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/BuscadorCanciones/static/css/main.2040f695.css",
-    "main.js": "/BuscadorCanciones/static/js/main.21e0f9b2.js",
-    "static/media/music-background.jpg": "/BuscadorCanciones/static/media/music-background.1f52f07ae30479ab3045.jpg",
-    "index.html": "/BuscadorCanciones/index.html",
-    "main.2040f695.css.map": "/BuscadorCanciones/static/css/main.2040f695.css.map",
-    "main.21e0f9b2.js.map": "/BuscadorCanciones/static/js/main.21e0f9b2.js.map"
+    "main.css": "/static/css/main.60c6bc8d.css",
+    "main.js": "/static/js/main.21e0f9b2.js",
+    "static/media/music-background.jpg": "/static/media/music-background.1f52f07ae30479ab3045.jpg",
+    "index.html": "/index.html",
+    "main.60c6bc8d.css.map": "/static/css/main.60c6bc8d.css.map",
+    "main.21e0f9b2.js.map": "/static/js/main.21e0f9b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.2040f695.css",
+    "static/css/main.60c6bc8d.css",
     "static/js/main.21e0f9b2.js"
   ]
 }
