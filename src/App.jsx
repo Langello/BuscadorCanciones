@@ -26,7 +26,7 @@ function App() {
         <Row className="justify-content-center g-4" xs={1} md={2} lg={3}>
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Buscador />} />
+              <Route path="/BuscadorCanciones" element={<Buscador />} />
             </Routes>
           </BrowserRouter>
         </Row>
