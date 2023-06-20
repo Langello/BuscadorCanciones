@@ -24,25 +24,36 @@ export const Buscador = () => {
   };
   // usamos fetch para traer las canciones
   const searchSongs = async (value) => {
-    const res = await fetch(`${API_URL}/suggest/${value}`);
-    const data = await res.json();
-    setResultadoBusquedaCanciones(data.data);
-
-    console.log(resultadoBusquedaCanciones);
+    if (value.trim() !== "") {
+      const res = await fetch(`${API_URL}/suggest/${value}`);
+      const data = await res.json();
+      setResultadoBusquedaCanciones(data.data);
+    } else {
+      setResultadoBusquedaCanciones(null); // Reinicia los resultados de búsqueda si no hay contenido
+    }
   };
+  
   //Dibujamos el fomulario donde se escriba la canción que buscamos
   return (
     <>
       <InputGroup size="lg" className="mb-3 mt-5">
-        <Form.Control
-          placeholder="Escribe el nombre del artista o la canción que buscas"
-          aria-label="Nombre de la cancion"
-          aria-describedby="basic-addon2"
-          ref={valorInputBusqueda}
-          onKeyUp={() => {
-            searchSongs(valorInputBusqueda.current.value); //Mientras se escriba en el input se ejecuta la funcion "searchSongs".
-          }}
-        />
+
+      <Form.Control
+        placeholder="Escribe el nombre del artista o la canción que buscas"
+        aria-label="Nombre de la canción"
+        aria-describedby="basic-addon2"
+        ref={valorInputBusqueda}
+        onInput={() => {
+          const inputValue = valorInputBusqueda.current.value;
+          if (inputValue.trim() !== "") {
+            searchSongs(inputValue);
+          } else {
+            setResultadoBusquedaCanciones(null); // Reinicia los resultados de búsqueda si no hay contenido
+          }
+        }}
+      />
+
+
       </InputGroup>
 
       {resultadoBusquedaCanciones &&
