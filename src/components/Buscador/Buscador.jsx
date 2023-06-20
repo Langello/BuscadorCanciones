@@ -79,7 +79,7 @@ export const Buscador = () => {
                 <Card.Footer className="col-12">
                   <Card.Link href={item.link} target="_blank" rel="noreferrer">
                     Escucha la canción
-                    <cite title={item.title}> Completa</cite>
+                    <cite title={item.title}>  {item.title}  completa</cite>
                   </Card.Link>
                 </Card.Footer>
               </Card>

@@ -3,7 +3,7 @@ import { Container, Navbar, Row } from "react-bootstrap"; //los elementos que us
 import { Buscador } from "./components/Buscador/Buscador"; //Nuestro buscador
 import { BrowserRouter, Route, Routes } from "react-router-dom"; //Rutas
 // import { DetalleLetra } from "./components/DetalleLetra/DetalleLetra"; // El componente que muestra las letras de las canciones
-
+const logo = process.env.PUBLIC_URL + '/nota-musical.png';
 //App dibuja la barra de navegación y trae los compnentes Buscador y DetalleLetra
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Navbar.Brand href="/" style={{fontSize: "1.8rem", fontFamily: 'Rubik'}} >
             <img
               alt="logo notas musicales"
-              src="/nota-musical.png"
+              src={logo}
               width="35"
               height="35"
               className="d-inline-block align-top"
