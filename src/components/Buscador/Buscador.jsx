@@ -39,6 +39,7 @@ export const Buscador = () => {
       <InputGroup size="lg" className="mb-3 mt-5">
 
       <Form.Control
+        autoFocus
         placeholder="Escribe el nombre del artista o la canción que buscas"
         aria-label="Nombre de la canción"
         aria-describedby="basic-addon2"
@@ -75,24 +76,14 @@ export const Buscador = () => {
                     <img
                       src={item.album.cover}
                       alt={item.album.title}
-                      className="col-4 mb-2"
+                      className="col-6 mb-2"
                     />
-                    <div className="col-8">
-                      <p className="col-12" style={{ textAlign: "center" }}>
-                        Escuchar preview
-                      </p>
-                      <audio id="audio" controls className="col-12">
-                        <source type="audio/wav" src={item.preview} />
-                      </audio>
-                    </div>
+                    <Card.Link className="col-6 text-reset" href={item.link} target="_blank" rel="noreferrer">
+                    Escucha la canción
+                    <cite title={item.title}>  {item.title}  completa.</cite>
+                  </Card.Link>
                   </Card.Text>
                 </Card.Body>
-                <Card.Footer className="col-12">
-                  <Card.Link href={item.link} target="_blank" rel="noreferrer">
-                    Escucha la canción
-                    <cite title={item.title}>  {item.title}  completa</cite>
-                  </Card.Link>
-                </Card.Footer>
               </Card>
             </Col>
           );

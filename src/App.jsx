@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar bg="dark" variant="dark" className="sticky-top titulo">
         <Container className="justify-content-center">
-          <Navbar.Brand href="/" style={{fontSize: "1.8rem", fontFamily: 'Rubik'}} >
+          <Navbar.Brand style={{fontSize: "1.8rem", fontFamily: 'Rubik'}} >
             <img
               alt="logo notas musicales"
               src={logo}
